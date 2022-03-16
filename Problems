@@ -1,2 +1,4 @@
 1.
-const sp<IAudioPolicyService>& aps = AudioSystem::get_audio_policy_service();
+Q:const sp<IAudioPolicyService>& aps = AudioSystem::get_audio_policy_service();
+A:右端表示AudioSystem作用域下的get_audio_policy_service方法，此方法返回一个指针;左端sp<IAudioPolicyService>& aps表示定义一个指向IAudioPolicyService类的智能指针aps ,且用aps来引用
+右端返回的指针。const则表示aps代表的内存值是常量，不可改变。
