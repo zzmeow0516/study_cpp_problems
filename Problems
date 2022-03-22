@@ -8,9 +8,13 @@ Q:int *&y1=p1;
 A:&y1表示y1为引用，×表示引用的是一个指针，int表示指针指向的类型为int 。即 y1是一个指向int型的p1指针的引用.
 
 3.
-Q:string s1& const() 
-A:
+Q:string &s1 const() 和 const string &s1()
+A:前者表示函数中的成员不可被改变，后者表示引用的string返回值不可被改变。看const之后跟的是什么而决定。
 
 4.
-Q:std::ostream,std::istream
+Q:std::ostream &print(std::ostream&,const sale_data&)
 A:
+
+5.
+Q:inline
+A:inline的作用就是把一些体量较小的函数放到 头文件 中，以后需要调用的时候就相当于直接将函数文本进行替换，省略了调用流程；内联函数分为隐式和显式，显式就是直接在函数前加上inline func1();隐式就是将函数 定义 在类的里面。
